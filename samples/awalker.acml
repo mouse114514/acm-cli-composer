@@ -1,0 +1,52 @@
+# gen_awalker — Alan Walker style (sparse, pentatonic, stepwise)
+name = "awalker"
+bpm = 95
+
+[track kick]
+instrument = drums
+mode = parallel
+volume = 0.70
+notes = K:q:pp,R:q,R:q,R:q,K:q:pp,R:q,R:q,R:q,K:q:pp,R:q,R:q,R:q,K:q:pp,R:q,R:q,R:q,K:q:mp,R:q,R:q,R:q,K:q:mp,R:q,R:q,R:q,K:q:mp,R:q,R:q,R:q,K:q:mp,R:q,R:q,R:q,K:q:mf,R:q,R:q,R:q,K:q:mf,R:q,R:q,R:q,K:q:mf,R:q,R:q,R:q,K:q:mf,R:q,R:q,R:q,K:q,R:q,K:q,R:q,K:q,R:q,K:q,R:q,K:q,R:q,K:q,R:q,K:q,R:q,K:q,R:q
+
+[track snare]
+instrument = drums
+mode = parallel
+volume = 0.55
+notes = R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,S:q:pp,R:q,R:q,R:q,S:q:pp,R:q,R:q,R:q,S:q:pp,R:q,R:q,R:q,S:q:pp,R:q,R:q,R:q,S:q:mp,R:q,R:q,R:q,S:q:mp,R:q,R:q,R:q,S:q:mp,R:q,R:q,R:q,S:q:mp,R:q,R:q,R:q,S:q:mf,R:q,S:q:mf,R:q,S:q:mf,R:q,S:q:mf,R:q,S:q:mf,R:q,S:q:mf,R:q,S:q:mf,R:q,S:q:mf
+
+[track hihat]
+instrument = drums
+mode = parallel
+volume = 0.25
+notes = R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,R:e,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:pp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp,H:e:mp
+
+[track bass]
+instrument = bass
+mode = parallel
+volume = 0.60
+notes = C1:w:pp,C1:w:pp,C1:w:pp,C1:w:pp,Ab1:h:pp,Ab1:h:pp,Ab1:h:pp,Ab1:h:pp,Eb1:h:pp,Eb1:h:pp,Eb1:h:pp,Eb1:h:pp,Bb1:h:mp,Bb1:h:mp,Bb1:h:mp,Bb1:h:mp,C1:h:mp,C1:h:mp,C1:h:mp,C1:h:mp,Ab1:q:mf,Ab1:q:mf,Ab1:q:mf,Ab1:q:mf,Ab1:q:mf,Ab1:q:mf,Ab1:q:mf,Ab1:q:mf,Bb1:q:mf,Bb1:q:mf,Bb1:q:mf,Bb1:q:mf,Bb1:q:mf,Bb1:q:mf,Bb1:q:mf,Bb1:q:mf
+
+[track pad]
+instrument = pad
+mode = parallel
+volume = 0.30
+notes = C2:w:pp,C2:w:pp,C2:w:pp,C2:w:pp,Ab2:w:pp,Ab2:w:pp,Eb2:w:pp,Eb2:w:pp,Bb2:w:mp,Bb2:w:mp,C2:w:mp,C2:w:mp,Ab2:w:mf,Ab2:w:mf,Bb2:w:mf,Bb2:w:mf
+
+[track piano]
+instrument = piano
+mode = parallel
+volume = 0.40
+notes = C2:h:pp,Eb2:h:pp,C2:h:pp,Eb2:h:pp,C2:h:pp,Eb2:h:pp,C2:h:pp,Eb2:h:pp,C2:h:pp,Eb2:h:pp,C2:h:pp,Eb2:h:pp,C2:h:pp,Eb2:h:pp,C2:h:pp,Eb2:h:pp,Ab2:h:pp,C3:h:pp,Ab2:h:pp,C3:h:pp,Ab2:h:pp,C3:h:pp,Ab2:h:pp,C3:h:pp,Eb2:h:pp,G2:h:pp,Eb2:h:pp,G2:h:pp,Eb2:h:pp,G2:h:pp,Eb2:h:pp,G2:h:pp,Bb2:q:mp,D3:q:mp,F3:q:mp,R:q,Bb2:q:mp,D3:q:mp,F3:q:mp,R:q,C2:q:mp,Eb2:q:mp,G2:q:mp,R:q,C2:q:mp,Eb2:q:mp,G2:q:mp,R:q,Ab2:q:mp,C3:q:mp,Eb3:q:mp,R:q,Ab2:q:mp,C3:q:mp,Eb3:q:mp,R:q,Bb2:q:mp,D3:q:mp,F3:q:mp,R:q,Bb2:q:mp,D3:q:mp,F3:q:mp,R:q
+
+[track lead]
+instrument = sawtooth
+mode = parallel
+volume = 0.55
+notes = G4:h:pp,Bb4:q:pp,G4:q:pp,F4:q:pp,Eb4:h:pp,F4:h:pp,G4:q:pp,Eb4:w:pp,Eb4:h:pp,G4:q:pp,Ab4:q:pp,G4:q:pp,F4:q:pp,Eb4:h:pp,Bb4:h:pp,G4:q:pp,F4:q:pp,Eb4:q:pp,F4:q:pp,G4:h:pp,D5:q:mp,F5:q:mp,Eb5:q:mp,D5:q:mp,C5:h:mp,Bb4:q:mp,G4:q:mp,Ab4:q:mp,G4:h:mp,F4:q:mp,G4:q:mp,Eb4:q:mp,F4:q:mp,G4:q:mp,C5:q:mf,D5:q:mf,Eb5:q:mf,C5:q:mf,C5:q:mf,Eb5:q:mf,Ab5:q:mf,G5:q:mf,G5:q:mf,F5:q:mf,Eb5:h:mf,D5:q:mf,C5:q:mf,Bb4:h:mf
+
+[track arp]
+instrument = string
+mode = parallel
+volume = 0.20
+pan = -0.3
+notes = G2:q:pp,Eb3:q:pp,C4:q:pp,Eb3:q:pp,G2:q:pp,Eb3:q:pp,C4:q:pp,Eb3:q:pp,G2:q:pp,Eb3:q:pp,C4:q:pp,Eb3:q:pp,G2:q:pp,Eb3:q:pp,C4:q:pp,Eb3:q:pp,Eb2:q:pp,C3:q:pp,Ab3:q:pp,C3:q:pp,Eb2:q:pp,C3:q:pp,Ab3:q:pp,C3:q:pp,Bb1:q:pp,G2:q:pp,Eb3:q:pp,G2:q:pp,Bb1:q:pp,G2:q:pp,Eb3:q:pp,G2:q:pp,F2:q:mp,D3:q:mp,Bb3:q:mp,D3:q:mp,F2:q:mp,D3:q:mp,Bb3:q:mp,D3:q:mp,G2:q:mp,Eb3:q:mp,C4:q:mp,Eb3:q:mp,G2:q:mp,Eb3:q:mp,C4:q:mp,Eb3:q:mp,Eb2:q:mp,C3:q:mp,Ab3:q:mp,C3:q:mp,Eb2:q:mp,C3:q:mp,Ab3:q:mp,C3:q:mp,F2:q:mp,D3:q:mp,Bb3:q:mp,D3:q:mp,F2:q:mp,D3:q:mp,Bb3:q:mp,D3:q:mp

@@ -1,0 +1,33 @@
+# gen_beginner — D小调, 下行级进+四度跳, 5层
+name = "beginner"
+bpm = 115
+
+[track pad]
+instrument = pad
+mode = parallel
+volume = 0.25
+notes = D4:w:pp,C4:w:pp,Bb3:w:pp,C4:w:pp,D4:w:pp,C4:w:pp,Bb3:w:pp,C4:w:pp,D4:w:pp,C4:w:pp,Bb3:w:pp,C4:w:pp,D4:w:pp,C4:w:pp,Bb3:w:pp,C4:w:pp,D4:w:mp,C4:w:mp,Bb3:w:mp,C4:w:mp,D4:w:mp,C4:w:mp,Bb3:w:mp,C4:w:mp,D4:w:mp,C4:w:mp,Bb3:w:mp,C4:w:mp,D4:w:mp,C4:w:mp,Bb3:w:mp,C4:w:mp,D4:w:mp,C4:w:mp,Bb3:w:mp,C4:w:mp,D4:w:mp,C4:w:mp,Bb3:w:mp,C4:w:mp,D4:w:pp,C4:w:pp,Bb3:w:pp,C4:w:pp,D4:w:pp,C4:w:pp,Bb3:w:pp,C4:w:pp
+
+[track kick]
+instrument = drums
+mode = parallel
+volume = 0.45
+notes = K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp
+
+[track snare]
+instrument = drums
+mode = parallel
+volume = 0.35
+notes = R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp
+
+[track bass]
+instrument = bass
+mode = parallel
+volume = 0.45
+notes = R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,D1:h:mp,D1:h:mp,C1:h:mp,C1:h:mp,Bb1:h:mp,Bb1:h:mp,C1:h:mp,C1:h:mp,D1:h:mp,D1:h:mp,C1:h:mp,C1:h:mp,Bb1:h:mp,Bb1:h:mp,C1:h:mp,C1:h:mp,D1:h:mp,D1:h:mp,C1:h:mp,C1:h:mp,Bb1:h:mp,Bb1:h:mp,C1:h:mp,C1:h:mp,D1:h:mp,D1:h:mp,C1:h:mp,C1:h:mp,Bb1:h:mp,Bb1:h:mp,C1:h:mp,C1:h:mp,D1:h:mp,D1:h:mp,C1:h:mp,C1:h:mp,Bb1:h:mp,Bb1:h:mp,C1:h:mp,C1:h:mp,D1:h:mp,D1:h:mp,C1:h:mp,C1:h:mp,Bb1:h:mp,Bb1:h:mp,C1:h:mp,C1:h:mp,D1:h:pp,D1:h:pp,C1:h:pp,C1:h:pp,Bb1:h:pp,Bb1:h:pp,C1:h:pp,C1:h:pp,D1:h:pp,D1:h:pp,C1:h:pp,C1:h:pp,Bb1:h:pp,Bb1:h:pp,C1:h:pp,C1:h:pp
+
+[track lead]
+instrument = piano
+mode = parallel
+volume = 0.45
+notes = R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,A4:e:mp,G4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,E4:e:mp,F4:e:mp,G4:e:mp,G4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,F4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,Bb3:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,G4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,F4:e:mp,A4:e:mp,G4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,E4:e:mp,F4:e:mp,G4:e:mp,G4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,F4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,Bb3:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,G4:e:mp,F4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,F4:e:mp,A4:e:mf,G4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,E4:e:mf,F4:e:mf,G4:e:mf,G4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,C4:e:mf,D4:e:mf,E4:e:mf,F4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,C4:e:mf,Bb3:e:mf,C4:e:mf,D4:e:mf,E4:e:mf,G4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,C4:e:mf,D4:e:mf,E4:e:mf,F4:e:mf,A4:e:mf,G4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,E4:e:mf,F4:e:mf,G4:e:mf,G4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,C4:e:mf,D4:e:mf,E4:e:mf,F4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,C4:e:mf,Bb3:e:mf,C4:e:mf,D4:e:mf,E4:e:mf,G4:e:mf,F4:e:mf,E4:e:mf,D4:e:mf,C4:e:mf,D4:e:mf,E4:e:mf,F4:e:mf,D4:e:mf,F4:e:mf,A4:e:mf,D5:e:mf,A4:e:mf,F4:e:mf,D4:e:mf,R:e,C4:e:mf,E4:e:mf,G4:e:mf,C5:e:mf,G4:e:mf,E4:e:mf,C4:e:mf,R:e,Bb3:e:mf,D4:e:mf,F4:e:mf,Bb4:e:mf,F4:e:mf,D4:e:mf,Bb3:e:mf,R:e,C5:e:mf,D5:e:mf,E5:e:mf,F5:e:mf,E5:e:mf,D5:e:mf,C5:e:mf,R:e,D4:e:mf,F4:e:mf,A4:e:mf,D5:e:mf,A4:e:mf,F4:e:mf,D4:e:mf,R:e,C4:e:mf,E4:e:mf,G4:e:mf,C5:e:mf,G4:e:mf,E4:e:mf,C4:e:mf,R:e,Bb3:e:mf,D4:e:mf,F4:e:mf,Bb4:e:mf,F4:e:mf,D4:e:mf,Bb3:e:mf,R:e,C5:e:mf,D5:e:mf,E5:e:mf,F5:e:mf,E5:e:mf,D5:e:mf,C5:e:mf,R:e,D5:q:pp,A4:e:pp,R:e,R:q,R:q,C5:q:pp,G4:e:pp,R:e,R:q,R:q,Bb4:q:pp,F4:e:pp,R:e,R:q,R:q,C5:q:pp,G4:e:pp,R:e,R:q,R:q,D5:q:pp,A4:e:pp,R:e,R:q,R:q,C5:q:pp,G4:e:pp,R:e,R:q,R:q,Bb4:q:pp,F4:e:pp,R:e,R:q,R:q,C5:q:pp,G4:e:pp,R:e,R:q,R:q

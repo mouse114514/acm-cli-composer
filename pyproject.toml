@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acm-composer"
+version = "0.5.0"
+description = "CLI-based non-interactive music composition tool"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+accelerate = ["numpy"]
+cuda = ["cupy-cuda12x"]
+
+[project.scripts]
+acm = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli", "composer", "track", "acml"]
+
+[tool.setuptools.packages.find]
+include = ["tests*"]
+exclude = ["output", "projects", "samples", "docs"]

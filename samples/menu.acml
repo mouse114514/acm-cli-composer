@@ -1,0 +1,29 @@
+# KEIC 主菜单BGM — C大调洗脑循环
+name = "menu"
+bpm = 110
+
+[track pad]
+instrument = pad
+mode = parallel
+volume = 0.28
+pan = 0.2
+notes = E4:w:mp,E4:w:mp,B3:w:mp,B3:w:mp,C4:w:mp,C4:w:mp,A3:w:mp,A3:w:mp,E4:w:mp,E4:w:mp,B3:w:mp,B3:w:mp,C4:w:mp,C4:w:mp,A3:w:mp,A3:w:mp
+
+[track kick]
+instrument = drums
+mode = parallel
+volume = 0.20
+notes = K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q,K:q:pp,R:q
+
+[track bass]
+instrument = bass
+mode = parallel
+volume = 0.35
+notes = C1:h:mp,C1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,G1:h:mp,G1:h:mp,A1:h:mp,A1:h:mp,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,F1:h:mp,F1:h:mp,C1:h:mp,C1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,G1:h:mp,G1:h:mp,A1:h:mp,A1:h:mp,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,F1:h:mp,F1:h:mp
+
+[track lead]
+instrument = piano
+mode = parallel
+volume = 0.45
+pan = -0.15
+notes = C4:q:mf,C5:q:mf,E5:q:mf,C5:q:mf,E4:q:mf,C5:q:mf,C4:q:mf,R:q,B3:q:mf,D4:q:mf,G4:q:mf,D4:q:mf,D4:q:mf,G4:q:mf,B3:q:mf,R:q,A3:q:mf,C4:q:mf,E4:q:mf,C4:q:mf,C4:q:mf,E4:q:mf,A3:q:mf,R:q,F3:q:mf,A3:q:mf,C4:q:mf,A3:q:mf,E4:e:mf,C4:e:mf,G4:q:mf,R:q,R:q,C4:q:mp,C5:q:mp,E5:q:mp,C5:q:mp,E4:q:mp,C5:q:mp,C4:q:mp,R:q,B3:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,D4:q:mp,G4:q:mp,B3:q:mp,R:q,A3:q:mp,C4:q:mp,E4:q:mp,C4:q:mp,C4:q:mp,E4:q:mp,A3:q:mp,R:q,F3:q:mp,A3:q:mp,C4:q:mp,A3:q:mp,E4:e:mp,C4:e:mp,G4:q:mp,R:q,R:q

@@ -1,0 +1,87 @@
+name = "business_bg"
+bpm = 110
+
+# -- Pad: warm sustained chords throughout --
+[track pad]
+instrument = pad
+volume = 0.5
+pan = 0.0
+notes = F3maj7:w:mp, +
+        F3maj7:w:mp, +
+        F3maj7:w:mp, +
+        F3maj7:w:mp, +
+        D3m7:w:mp, +
+        D3m7:w:mp, +
+        D3m7:w:mp, +
+        D3m7:w:mp, +
+        G37:w:mp, +
+        G37:w:mp, +
+        G37:w:mp, +
+        G37:q:mp, +
+        C3maj7:w:mp, +
+        C3maj7:w:mp, +
+        C3maj7:h:mp
+
+# -- Bass: steady root notes --
+[track bass]
+instrument = bass
+volume = 0.6
+pan = -0.2
+notes = F2:h:mf,F3:h:mf, +
+        F2:h:mf,F3:h:mf, +
+        F2:h:mf,F3:h:mf, +
+        F2:h:mf,F3:h:mf, +
+        D2:h:mf,D3:h:mf, +
+        D2:h:mf,D3:h:mf, +
+        D2:h:mf,D3:h:mf, +
+        D2:h:mf,D3:h:mf, +
+        G2:h:mf,G3:h:mf, +
+        G2:h:mf,G3:h:mf, +
+        G2:h:mf,G3:h:mf, +
+        G2:h:mf,G3:q:mf, +
+        C2:h:mf,C3:h:mf, +
+        C2:h:mf,C3:h:mf, +
+        C2:h:mf
+
+# -- Guitar: gentle arpeggios --
+[track guitar]
+instrument = guitar
+volume = 0.35
+pan = 0.3
+harmony = 3
+notes = F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp, +
+        F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp, +
+        F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp, +
+        F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp, +
+        D4:e:mp,F4:e:mp,A4:e:mp,D5:e:mp, +
+        D4:e:mp,F4:e:mp,A4:e:mp,D5:e:mp, +
+        D4:e:mp,F4:e:mp,A4:e:mp,D5:e:mp, +
+        D4:e:mp,F4:e:mp,A4:e:mp,C5:e:mp, +
+        G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp, +
+        G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp, +
+        G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp, +
+        G4:e:mp,B4:e:mp,D5:e:mp,F5:e:mp, +
+        C4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp, +
+        C4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp, +
+        C4:e:mp,E4:e:mp,G4:e:mp
+
+# -- Drums: light beat --
+[track drums]
+instrument = drums
+volume = 0.3
+pan = 0.0
+notes = K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp,H:e:mf, +
+        K:e:mf,_,H:e:mf,S:e:mp

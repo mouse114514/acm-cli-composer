@@ -1,0 +1,27 @@
+# gen_easy
+name = "easy"
+bpm = 110
+
+[track pad]
+instrument = pad
+mode = parallel
+volume = 0.30
+notes = A3:w:pp,F3:w:pp,C4:w:pp,G3:w:pp,A3:w:pp,F3:w:pp,C4:w:pp,G3:w:pp,A3:w:pp,F3:w:pp,C4:w:pp,G3:w:pp,A3:w:pp,F3:w:pp,C4:w:pp,G3:w:pp,A3:w:mp,F3:w:mp,C4:w:mp,G3:w:mp,A3:w:mp,F3:w:mp,C4:w:mp,G3:w:mp,A3:w:mp,F3:w:mp,C4:w:mp,G3:w:mp,A3:w:mp,F3:w:mp,C4:w:mp,G3:w:mp,A3:w:mp,F3:w:mp,C4:w:mp,G3:w:mp,A3:w:mp,F3:w:mp,C4:w:mp,G3:w:mp,A3:w:pp,F3:w:pp,C4:w:pp,G3:w:pp,A3:w:pp,F3:w:pp,C4:w:pp,G3:w:pp
+
+[track kick]
+instrument = drums
+mode = parallel
+volume = 0.45
+notes = K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp,K:q:mp
+
+[track bass]
+instrument = bass
+mode = parallel
+volume = 0.50
+notes = R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,A1:h:mp,A1:h:mp,F1:h:mp,F1:h:mp,C1:h:mp,C1:h:mp,G1:h:mp,G1:h:mp,A1:h:pp,A1:h:pp,F1:h:pp,F1:h:pp,C1:h:pp,C1:h:pp,G1:h:pp,G1:h:pp,A1:h:pp,A1:h:pp,F1:h:pp,F1:h:pp,C1:h:pp,C1:h:pp,G1:h:pp,G1:h:pp
+
+[track lead]
+instrument = piano
+mode = parallel
+volume = 0.50
+notes = R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,A4:e:mp,E4:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,C4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,B3:e:mp,G4:e:mp,B3:e:mp,G4:e:mp,B3:e:mp,G4:e:mp,B3:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,C4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,B3:e:mp,G4:e:mp,B3:e:mp,G4:e:mp,B3:e:mp,G4:e:mp,B3:e:mp,A4:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,A4:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,A4:e:mp,G4:e:mp,F4:e:mp,C4:e:mp,A4:e:mp,G4:e:mp,F4:e:mp,C4:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,E4:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,E4:e:mp,G4:e:mp,D4:e:mp,B3:e:mp,D4:e:mp,G4:e:mp,D4:e:mp,B3:e:mp,D4:e:mp,A4:e:mf,G4:e:mf,E4:e:mf,C4:e:mf,A4:e:mf,G4:e:mf,E4:e:mf,C4:e:mf,A4:e:mf,G4:e:mf,F4:e:mf,C4:e:mf,A4:e:mf,G4:e:mf,F4:e:mf,C4:e:mf,G4:e:mf,E4:e:mf,C4:e:mf,E4:e:mf,G4:e:mf,E4:e:mf,C4:e:mf,E4:e:mf,G4:e:mf,D4:e:mf,B3:e:mf,D4:e:mf,G4:e:mf,D4:e:mf,B3:e:mf,D4:e:mf,A4:e:mf,E4:e:mf,A4:e:mf,C4:e:mf,A4:e:mf,E4:e:mf,A4:e:mf,C4:e:mf,A4:e:mf,C4:e:mf,F4:e:mf,A4:e:mf,A4:e:mf,C4:e:mf,F4:e:mf,A4:e:mf,G4:e:mf,E4:e:mf,G4:e:mf,C4:e:mf,G4:e:mf,E4:e:mf,G4:e:mf,C4:e:mf,G4:e:mf,B3:e:mf,D4:e:mf,G4:e:mf,G4:e:mf,B3:e:mf,D4:e:mf,G4:e:mf,A4:e:mp,E4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,E4:e:mp,A4:e:mp,C4:e:mp,A4:e:mp,C4:e:mp,F4:e:mp,A4:e:mp,A4:e:mp,C4:e:mp,F4:e:mp,A4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,C4:e:mp,G4:e:mp,E4:e:mp,G4:e:mp,C4:e:mp,G4:e:mp,B3:e:mp,D4:e:mp,G4:e:mp,G4:e:mp,B3:e:mp,D4:e:mp,G4:e:mp,A4:h:pp,R:q,R:q,E4:h:pp,R:q,R:q,A4:e:pp,E4:e:pp,R:q,R:q,R:w,C4:h:pp,R:q,R:q,R:w,A3:h:pp,R:q,R:q,R:w

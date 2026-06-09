@@ -1,0 +1,46 @@
+# KEIC Beginner — 初学者曲目
+name = "keic_easy"
+bpm = 120
+
+[track kick]
+instrument = drums
+mode = parallel
+volume = 0.70
+notes = K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q,K:q:mf,R:q
+
+[track snare]
+instrument = drums
+mode = parallel
+volume = 0.55
+notes = R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp,R:q,S:q:mp
+
+[track hihat]
+instrument = drums
+mode = parallel
+volume = 0.25
+notes = R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,R:q,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp,H:q:pp
+
+[track bass]
+instrument = bass
+mode = parallel
+volume = 0.65
+notes = C2:w:mp,G1:w:mp,A1:w:mp,F1:w:mp,C2:w:mp,G1:w:mp,F1:w:mp,C2:w:mp,C2:w:mp,G1:w:mp,A1:w:mp,F1:w:mp,C2:w:mp,G1:w:mp,F1:w:mp,C2:w:mp,C2:w:mp,G1:w:mp,A1:w:mp,F1:w:mp,C2:w:mp,G1:w:mp,F1:w:mp,C2:w:mp,C2:w:mp,G1:w:mp,A1:w:mp,F1:w:mp,C2:w:mp,G1:w:mp,F1:w:mp,C2:w:mp,C2:w:mp,G1:w:mp,A1:w:mp,F1:w:mp,C2:w:mp,G1:w:mp,F1:w:mp,C2:w:mp,C2:w:mp,G1:w:mp,A1:w:mp,F1:w:mp,C2:w:mp,G1:w:mp,F1:w:mp,C2:w:mp
+
+[track piano]
+instrument = piano
+mode = parallel
+volume = 0.50
+notes = C3:h:pp,C4:h:pp,G2:h:pp,G4:h:pp,A2:h:pp,A3:h:pp,F2:h:pp,F3:h:pp,C3:h:pp,C4:h:pp,G2:h:pp,G4:h:pp,F2:h:pp,F3:h:pp,C3:h:pp,C4:h:pp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,A2:q:mp,E3:q:mp,A3:q:mp,E3:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,A2:q:mp,E3:q:mp,A3:q:mp,E3:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,A2:q:mp,E3:q:mp,A3:q:mp,E3:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,A2:q:mp,E3:q:mp,A3:q:mp,E3:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,G2:q:mp,D4:q:mp,G4:q:mp,D4:q:mp,F2:q:mp,C3:q:mp,F3:q:mp,C3:q:mp,C3:q:mp,G3:q:mp,C4:q:mp,G3:q:mp,C3:w:pp,G2:w:pp,A2:w:pp,F2:w:pp,C3:w:pp,G2:w:pp,F2:w:pp,C3:w:pp
+
+[track pad]
+instrument = pad
+mode = parallel
+volume = 0.20
+pan = 0.3
+notes = C3:w:pp,G2:w:pp,A2:w:pp,F2:w:pp,C3:w:pp,G2:w:pp,F2:w:pp,C3:w:pp,C3:w:mp,G2:w:mp,A2:w:mp,F2:w:mp,C3:w:mp,G2:w:mp,F2:w:mp,C3:w:mp,C3:w:mp,G2:w:mp,A2:w:mp,F2:w:mp,C3:w:mp,G2:w:mp,F2:w:mp,C3:w:mp,C3:w:mp,G2:w:mp,A2:w:mp,F2:w:mp,C3:w:mp,G2:w:mp,F2:w:mp,C3:w:mp,C3:w:mp,G2:w:mp,A2:w:mp,F2:w:mp,C3:w:mp,G2:w:mp,F2:w:mp,C3:w:mp,C3:w:mp,G2:w:mp,A2:w:mp,F2:w:mp,C3:w:mp,G2:w:mp,F2:w:mp,C3:w:mp
+
+[track lead]
+instrument = sawtooth
+mode = parallel
+volume = 0.45
+notes = R:w,R:w,R:w,R:w,R:w,R:w,R:w,R:w,C4:e:mp,D4:e:mp,E4:e:mp,G4:e:mp,A4:e:mp,G4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,R:e,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,R:e,C4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,E4:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,B4:e:mp,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,A4:e:mp,C4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,R:e,C4:e:mp,D4:e:mp,E4:e:mp,G4:e:mp,A4:e:mp,G4:e:mp,E4:e:mp,D4:e:mp,C4:e:mp,D4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,R:e,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,R:e,C4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,E4:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,B4:e:mp,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,A4:e:mp,C4:e:mp,E4:e:mp,G4:e:mp,C5:e:mp,G4:e:mp,E4:e:mp,C4:e:mp,R:e,C5:e:mp,D5:e:mp,E5:e:mp,G5:e:mp,A5:e:mp,G5:e:mp,E5:e:mp,D5:e:mp,C5:e:mp,D5:e:mp,E5:e:mp,G5:e:mp,C6:e:mp,G5:e:mp,E5:e:mp,C5:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,R:e,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,R:e,C5:e:mp,E5:e:mp,G5:e:mp,C6:e:mp,G5:e:mp,E5:e:mp,C5:e:mp,E5:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,B4:e:mp,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,A4:e:mp,C5:e:mp,E5:e:mp,G5:e:mp,C6:e:mp,G5:e:mp,E5:e:mp,C5:e:mp,R:e,C5:e:mp,D5:e:mp,E5:e:mp,G5:e:mp,A5:e:mp,G5:e:mp,E5:e:mp,D5:e:mp,C5:e:mp,D5:e:mp,E5:e:mp,G5:e:mp,C6:e:mp,G5:e:mp,E5:e:mp,C5:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,R:e,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,R:e,C5:e:mp,E5:e:mp,G5:e:mp,C6:e:mp,G5:e:mp,E5:e:mp,C5:e:mp,E5:e:mp,G4:e:mp,B4:e:mp,D5:e:mp,G5:e:mp,D5:e:mp,B4:e:mp,G4:e:mp,B4:e:mp,F4:e:mp,A4:e:mp,C5:e:mp,F5:e:mp,C5:e:mp,A4:e:mp,F4:e:mp,A4:e:mp,C5:e:mp,E5:e:mp,G5:e:mp,C6:e:mp,G5:e:mp,E5:e:mp,C5:e:mp,R:e,C4:e:pp,G3:e:pp,E3:e:pp,C3:e:pp,R:e,R:e,R:e,R:e,C4:e:pp,G3:e:pp,E3:e:pp,C3:e:pp,R:e,R:e,R:e,R:e,C4:e:pp,G3:e:pp,E3:e:pp,C3:e:pp,R:e,R:e,R:e,R:e,C4:e:pp,G3:e:pp,E3:e:pp,C3:e:pp,R:e,R:e,R:e,R:e,R:w,R:w,R:w,R:w

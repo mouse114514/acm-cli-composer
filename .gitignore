@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.mid
+*.wav
+*.sf2
+*.sf3
+*.sfz
+acm_composer.egg-info/
+output/
+projects/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
