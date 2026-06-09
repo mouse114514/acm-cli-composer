@@ -1,7 +1,9 @@
-# User scripts (personal test/generation)
+# Personal user data
 gen_*.py
 check_midi*.py
 debug_acml.py
+samples/*.acml
+!samples/acm.acml
 
 __pycache__/
 *.pyc
