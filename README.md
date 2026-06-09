@@ -1,4 +1,9 @@
-# ACM 编曲工具 v0.5.0
+# ACM 编曲工具
+
+[![CI](https://github.com/mouse114514/acm-cli-composer/actions/workflows/ci.yml/badge.svg)](https://github.com/mouse114514/acm-cli-composer/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
+[![GitHub release](https://img.shields.io/github/v/release/mouse114514/acm-cli-composer)](https://github.com/mouse114514/acm-cli-composer/releases)
 
 CLI 编曲软件 — 从 ACML 标记文件编译音乐，支持 MIDI 导出和 FluidSynth 高质量 WAV 渲染。
 
@@ -95,9 +100,20 @@ sudo apt install fluidsynth
 │   └── cli-reference.md  CLI 命令参考
 ├── samples/
 │   └── acm.acml          示例乐曲
-├── tests/                 162 项测试
-├── projects/              项目 JSON 文件
-└── output/                成品音频
+├── LICENSE
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── docs/
+│   ├── acml-format.md    ACML 语言参考
+│   └── cli-reference.md  CLI 命令参考
+├── samples/
+│   └── acm.acml          示例乐曲
+├── tests/                 91 项测试
+└── .github/
+    ├── workflows/ci.yml   CI 配置
+    ├── ISSUE_TEMPLATE/
+    └── PULL_REQUEST_TEMPLATE.md
 ```
 
 ## 测试
@@ -105,3 +121,11 @@ sudo apt install fluidsynth
 ```bash
 python -m pytest tests/ -v
 ```
+
+## 贡献
+
+请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 和 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
+
+## License
+
+[MIT](LICENSE)

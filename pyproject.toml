@@ -4,9 +4,31 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "acm-composer"
-version = "0.5.0"
-description = "CLI-based non-interactive music composition tool"
+version = "0.6.0"
+description = "CLI-based non-interactive music composition tool with ACML notation, MIDI export, FluidSynth WAV rendering"
 requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Mouse Dev"},
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+  "Topic :: Multimedia :: Sound/Audio :: MIDI",
+]
+
+[project.urls]
+Homepage = "https://github.com/mouse114514/acm-cli-composer"
+Repository = "https://github.com/mouse114514/acm-cli-composer"
+BugTracker = "https://github.com/mouse114514/acm-cli-composer/issues"
 
 [project.optional-dependencies]
 accelerate = ["numpy"]
