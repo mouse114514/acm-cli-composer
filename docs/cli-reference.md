@@ -111,7 +111,7 @@ python cli.py compose song.acml --json
 3. 调用 `fluidsynth` 将 MIDI → 高质量 WAV（`*_prowav.wav`）
 
 不指定 `--midi` 时自动从输出文件名派生 MIDI 路径。
-SoundFont 查找顺序：`--soundfont` 参数 → `~/.opencode/FluidR3_GM.sf2` → 环境默认路径。
+SoundFont 查找顺序：`--soundfont` 参数 → `~/.acm/FluidR3_GM.sf2` → 环境默认路径。
 
 ---
 
@@ -320,8 +320,8 @@ python cli.py midi2wav output/song.mid -o output/final.wav
 
 SoundFont 查找顺序：
 1. `--soundfont` 参数指定的路径
-2. `~/.opencode/default.sf2`
-3. `~/.opencode/FluidR3_GM.sf2`
+2. `~/.acm/default.sf2`
+3. `~/.acm/FluidR3_GM.sf2`
 4. 系统默认路径
 
 ---

@@ -430,13 +430,13 @@ def main(argv=None):
             sf_path = args.soundfont
             if not sf_path:
                 candidates = [
-                    os.path.expanduser("~/.opencode/default.sf2"),
-                    os.path.expanduser("~/.opencode/FluidR3_GM.sf2"),
+                    os.path.expanduser("~/.acm/default.sf2"),
+                    os.path.expanduser("~/.acm/FluidR3_GM.sf2"),
                     "/usr/share/sounds/sf2/FluidR3_GM.sf2",
                 ]
                 sf_path = next((p for p in candidates if os.path.exists(p)), None)
             if not sf_path or not os.path.exists(sf_path):
-                print("Error: SoundFont not found. Use --soundfont or place one at ~/.opencode/FluidR3_GM.sf2")
+                print("Error: SoundFont not found. Use --soundfont or place one at ~/.acm/FluidR3_GM.sf2")
                 return
             wav_output = os.path.splitext(midi_path)[0] + "_prowav.wav"
             cmd = [
@@ -547,14 +547,14 @@ def main(argv=None):
         if not sf_path:
             # 查找常见 SoundFont 路径
             candidates = [
-                os.path.expanduser("~/.opencode/default.sf2"),
+                os.path.expanduser("~/.acm/default.sf2"),
                 "/usr/share/sounds/sf2/FluidR3_GM.sf2",
                 "/usr/share/sounds/sf2/default.sf2",
                 "/System/Library/Components/CoreAudio.component/Contents/Resources/gs_instruments.sf2",
             ]
             sf_path = next((p for p in candidates if os.path.exists(p)), None)
         if not sf_path or not os.path.exists(sf_path):
-            print(f"Error: SoundFont not found. Specify it with --soundfont or place one at ~/.opencode/default.sf2")
+            print(f"Error: SoundFont not found. Specify it with --soundfont or place one at ~/.acm/default.sf2")
             return
 
         output = args.output

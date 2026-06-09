@@ -1073,7 +1073,7 @@ python cli.py midi2wav output/song.mid --output output/song_final.wav
 
 前置要求：
 - 安装 FluidSynth（`choco install fluidsynth` 或从官网下载）
-- 下载 SoundFont 文件（如 FluidR3_GM.sf2），放置到 `~/.opencode/`
+- 下载 SoundFont 文件（如 FluidR3_GM.sf2），放置到 `~/.acm/` 或通过 `--soundfont` 指定
 
 **Q: FM 合成器的 ratio 和 index 怎么调？**
 

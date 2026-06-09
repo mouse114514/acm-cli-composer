@@ -58,7 +58,7 @@ brew install fluid-synth
 sudo apt install fluidsynth
 ```
 
-下载 SoundFont（如 FluidR3_GM.sf2）放置到 `~/.opencode/`。
+下载 SoundFont（如 FluidR3_GM.sf2）放置到 `~/.acm/` 或通过 `--soundfont` 指定。
 
 ## 文档
 
