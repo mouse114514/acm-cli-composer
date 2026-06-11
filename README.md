@@ -1,51 +1,50 @@
-# ACM 编曲工具
+# ACM Composer
 
 [![CI](https://github.com/mouse114514/acm-cli-composer/actions/workflows/ci.yml/badge.svg)](https://github.com/mouse114514/acm-cli-composer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
 [![GitHub release](https://img.shields.io/github/v/release/mouse114514/acm-cli-composer)](https://github.com/mouse114514/acm-cli-composer/releases)
 
-CLI 编曲软件 — 从 ACML 标记文件编译音乐，支持 MIDI 导出和 FluidSynth 高质量 WAV 渲染。
+A CLI-based non-interactive music composition tool. Compose music from ACML notation files, with MIDI export and FluidSynth high-quality WAV rendering.
 
 ```bash
-# 一步到位
 python cli.py compile samples/acm.acml --prowav --loop 1
 ```
 
-## 安装
+## Installation
 
 ```bash
 pip install -e .
 
-# 可选加速（numpy）
+# Optional: numpy acceleration
 pip install -e ".[accelerate]"
 
-# 可选 GPU 加速（cupy，需 CUDA 12.x）
+# Optional: GPU acceleration (requires CUDA 12.x)
 pip install -e ".[cuda]"
 ```
 
-Python >= 3.10，无硬性依赖（numpy/cupy 可选）。
+Python >= 3.10, no hard dependencies (numpy/cupy optional).
 
-## 快速开始
+## Quick Start
 
 ```bash
-# 编译 ACML 并渲染高质量 WAV（一步到位）
+# Compile ACML and render high-quality WAV in one step
 python cli.py compile samples/acm.acml --prowav --loop 1
 
-# 只导出 WAV + MIDI
+# Export WAV + MIDI
 python cli.py compile samples/acm.acml --midi output/song.mid
 
-# 查看所有子命令
+# View all subcommands
 python cli.py --help
 ```
 
-也可通过安装后的入口使用：
+Or via the installed entry point:
 ```bash
 pip install -e .
 acm compile samples/acm.acml --prowav
 ```
 
-## FluidSynth 设置（可选，用于 prowav / midi2wav）
+## FluidSynth Setup (optional, for prowav / midi2wav)
 
 ```bash
 # Windows
@@ -58,73 +57,68 @@ brew install fluid-synth
 sudo apt install fluidsynth
 ```
 
-下载 SoundFont（如 FluidR3_GM.sf2）放置到 `~/.acm/` 或通过 `--soundfont` 指定。
+Place a SoundFont (e.g. FluidR3_GM.sf2) at `~/.acm/` or specify with `--soundfont`.
 
-## 文档
+## Documentation
 
-| 文档 | 说明 |
-|------|------|
-| `docs/acml-format.md` | ACML 标记语言完整参考 |
-| `docs/cli-reference.md` | CLI 命令参考手册 |
+| Document | Description |
+|----------|-------------|
+| `docs/acml-format.md` | ACML notation language reference |
+| `docs/cli-reference.md` | CLI command reference |
 
-## 功能
+## Features
 
-| 功能 | 说明 |
-|------|------|
-| ACML 编译 | 声明式标记语言 → 一键生成 WAV |
-| MIDI 导出 | GM 标准，含鼓映射、程序变更、串行/并行模式 |
-| `--prowav` | 编译 + MIDI + FluidSynth 高质量 WAV 一条龙 |
-| `midi2wav` | 单独将 MIDI 渲染为 WAV |
-| 乐器 | piano, guitar, bass, sawtooth, organ, bell, strings, brass, pad, lead, fm, wavetable, sample, trumpet, tuba, drums |
-| 鼓点 | K(底鼓), S(军鼓), H(闭镲), O(开镲), T(桶鼓) |
-| 和弦 | 17 种类型 + 自动和声 + 和弦推荐 |
-| FM 合成 | 可调 ratio/index |
-| 波形表 | saw / square / triangle / sine / 自定义 |
-| 采样回放 | WAV 加载 + 变调 |
-| 模式 | parallel（同时）/ serial（串行）+ 全局循环 |
-| 效果 | 混响 / 延迟 / 合唱 |
-| 紧凑标记 | `D5qf` → `D5:q:f`，节省 token |
-| GPU 加速 | 可选 cupy 支持 |
+| Feature | Description |
+|---------|-------------|
+| ACML Compile | Declarative notation -> one-step WAV generation |
+| MIDI Export | GM standard with drum mapping, program change, serial/parallel modes |
+| `--prowav` | Compile + MIDI + FluidSynth WAV in one command |
+| `midi2wav` | Standalone MIDI to WAV rendering |
+| Instruments | piano, guitar, bass, sawtooth, organ, bell, strings, brass, pad, lead, fm, wavetable, sample, trumpet, tuba, drums |
+| Drums | K(kick), S(snare), H(hi-hat closed), O(hi-hat open), T(tom) |
+| Chords | 17 types + auto-harmony + chord recommendation |
+| FM Synthesis | Adjustable ratio/index |
+| Wavetable | saw / square / triangle / sine / custom |
+| Sample Playback | WAV loading with pitch shifting |
+| Modes | parallel / serial + global loop |
+| Effects | reverb / delay / chorus |
+| Compact Notation | `D5qf` -> `D5:q:f`, token-efficient |
+| GPU Acceleration | Optional cupy support |
 
-## 项目结构
+## Project Structure
 
 ```
-├── cli.py          CLI 入口
-├── composer.py     核心合成引擎
-├── acml.py         ACML 解析器
-├── track.py        音轨数据类
+├── cli.py              CLI entry point
+├── composer.py         Core synthesis engine
+├── acml.py             ACML parser
+├── track.py            Track data class
 ├── pyproject.toml
 ├── README.md
-├── docs/
-│   ├── acml-format.md    ACML 语言参考
-│   └── cli-reference.md  CLI 命令参考
-├── samples/
-│   └── acm.acml          示例乐曲
 ├── LICENSE
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── SECURITY.md
 ├── docs/
-│   ├── acml-format.md    ACML 语言参考
-│   └── cli-reference.md  CLI 命令参考
+│   ├── acml-format.md
+│   └── cli-reference.md
 ├── samples/
-│   └── acm.acml          示例乐曲
-├── tests/                 91 项测试
+│   └── acm.acml        Example composition
+├── tests/              91 tests
 └── .github/
-    ├── workflows/ci.yml   CI 配置
+    ├── workflows/ci.yml
     ├── ISSUE_TEMPLATE/
     └── PULL_REQUEST_TEMPLATE.md
 ```
 
-## 测试
+## Tests
 
 ```bash
 python -m pytest tests/ -v
 ```
 
-## 贡献
+## Contributing
 
-请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 和 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## License
 
