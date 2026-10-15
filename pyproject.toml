@@ -38,7 +38,7 @@ cuda = ["cupy-cuda12x"]
 acm = "cli:main"
 
 [tool.setuptools]
-py-modules = ["cli", "composer", "track", "acml"]
+py-modules = ["cli", "composer", "track", "acml", "midiconv"]
 
 [tool.setuptools.packages.find]
 include = ["tests*"]

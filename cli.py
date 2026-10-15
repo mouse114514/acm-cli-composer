@@ -141,6 +141,11 @@ def main(argv=None):
     midi_parser.add_argument("--gain", "-g", type=float, default=1.0, help="增益倍率（默认 1.0）")
     midi_parser.add_argument("--sample-rate", "-r", type=int, default=44100, help="采样率（默认 44100）")
 
+    midiconv_parser = subparsers.add_parser("midiconv", help="将 MIDI 文件转换为 ACML")
+    midiconv_parser.add_argument("input", help="输入的 .mid 文件路径")
+    midiconv_parser.add_argument("--output", "-o", default=None, help="输出 .acml 文件路径（默认替换扩展名）")
+    midiconv_parser.add_argument("--json", action="store_true", help="JSON格式输出")
+
     args = parser.parse_args(argv)
     proj_dir, out_dir = _resolve_dirs(args)
 
@@ -577,6 +582,23 @@ def main(argv=None):
         size = os.path.getsize(output)
         size_str = f"{size / 1024 / 1024:.1f} MB" if size > 1024 * 1024 else f"{size / 1024:.1f} KB"
         print(f"Rendered: {output} ({size_str})")
+
+    elif args.command == "midiconv":
+        from midiconv import convert
+
+        if not os.path.exists(args.input):
+            print(f"Error: MIDI file '{args.input}' not found")
+            return
+        try:
+            text, out_path = convert(args.input, args.output)
+        except (ValueError, FileNotFoundError) as e:
+            print(f"Error: {e}")
+            return
+        if getattr(args, "json", False):
+            print(json.dumps({"input": args.input, "output": out_path,
+                              "size": os.path.getsize(out_path), "status": "converted"}))
+        else:
+            print(f"Converted: {args.input} -> {out_path}")
 
 if __name__ == "__main__":
     main()

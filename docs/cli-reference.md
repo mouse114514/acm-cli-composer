@@ -14,7 +14,8 @@ ACM (Arrangement Composer) command-line interface. Supports compiling music from
 6. [generate — Generate Audio from Project](#6-generate--generate-audio-from-project)
 7. [analyze — Chord Analysis](#7-analyze--chord-analysis)
 8. [midi2wav — MIDI to WAV](#8-midi2wav--midi-to-wav)
-9. [Environment Variables](#9-environment-variables)
+9. [midiconv — MIDI to ACML](#9-midiconv--midi-to-acml)
+10. [Environment Variables](#10-environment-variables)
 
 ---
 
@@ -36,6 +37,7 @@ Common command quick reference:
 |---------|---------|
 | Compile ACML → WAV + MIDI | `python cli.py compile song.acml --midi song.mid` |
 | Compile + FluidSynth output | `python cli.py compile song.acml --prowav` |
+| Convert MIDI → ACML | `python cli.py midiconv song.mid` |
 | View all subcommands | `python cli.py --help` |
 | View subcommand details | `python cli.py compile --help` |
 | Output JSON for scripts | `python cli.py status --json` |
@@ -326,7 +328,64 @@ SoundFont lookup order:
 
 ---
 
-## 9. Environment Variables
+## 9. midiconv — MIDI to ACML
+
+Convert a standard MIDI file (SMF format 0/1/2) into an editable ACML file. Pure Python, no external dependencies.
+
+```bash
+python cli.py midiconv <input.mid> [options]
+```
+
+### Arguments
+
+| Argument | Description |
+|----------|-------------|
+| `input` | Input `.mid` file path (required) |
+| `--output, -o <filename>` | Output `.acml` file path (default replaces extension with `.acml`) |
+| `--json` | Output result in JSON format |
+
+### What It Does
+
+| MIDI element | ACML mapping |
+|--------------|--------------|
+| Tempo meta event | `bpm = <value>` (first tempo wins; default 120) |
+| Note pitch | Note name, e.g. MIDI 60 → `C4` (C4 = middle C) |
+| Note duration | Quantized to the nearest ACML duration (`w w. h h. q q. e e. s s.`) |
+| Velocity (0-127) | Nearest dynamic: `ppp pp p mp mf f ff fff` |
+| Program change (GM) | Instrument name: piano, guitar, bass, organ, strings, brass, lead, pad, bell, sawtooth, wavetable, trumpet, tuba |
+| Track name meta event | Sanitized track label (e.g. `My Track!` → `My_Track`) |
+| Channel 9 (percussion) | Drum tracks: `K` kick, `S` snare, `H` hi-hat, `O` open hat/cymbals, `T` toms |
+| Overlapping notes (chords) | Split into parallel monophonic tracks (`_v1`, `_v2`, …) |
+| Gaps between notes | Rests (`R:q`, `R:e`, …) |
+
+### Examples
+
+```bash
+# Basic conversion (writes song.acml next to song.mid)
+python cli.py midiconv song.mid
+
+# Specify output path
+python cli.py midiconv song.mid -o output/song.acml
+
+# JSON output (suitable for script calls)
+python cli.py midiconv song.mid --json
+# → {"input": "song.mid", "output": "song.acml", "size": 12345, "status": "converted"}
+
+# Full round-trip: MIDI → ACML → WAV + MIDI + FluidSynth
+python cli.py midiconv song.mid -o song.acml
+python cli.py compile song.acml --prowav
+```
+
+### Notes & Limitations
+
+- **Duration quantization**: MIDI timing is converted to the nearest ACML duration letter. Files quantized to a sixteenth-note grid convert losslessly; unquantized timing may drift slightly.
+- **Long notes**: the longest ACML duration is `w.` (6 beats). Notes longer than that are truncated to `w.` with a following rest, so overall timing is preserved but sustain is shortened.
+- **Highly polyphonic channels** are split into one track per simultaneous voice. A channel with a large note cluster (e.g. 70+ simultaneous notes) produces many tracks — each is required to represent true polyphony, since one ACML track is monophonic.
+- **GM sound effects programs** (120-127) map to `wavetable`.
+
+---
+
+## 10. Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|

@@ -34,6 +34,9 @@ python cli.py compile samples/acm.acml --prowav --loop 1
 # Export WAV + MIDI
 python cli.py compile samples/acm.acml --midi output/song.mid
 
+# Convert an existing MIDI file to editable ACML
+python cli.py midiconv song.mid -o song.acml
+
 # View all subcommands
 python cli.py --help
 ```
@@ -71,6 +74,7 @@ Place a SoundFont (e.g. FluidR3_GM.sf2) at `~/.acm/` or specify with `--soundfon
 | Feature | Description |
 |---------|-------------|
 | ACML Compile | Declarative notation -> one-step WAV generation |
+| MIDI Import | `midiconv` converts any MIDI (SMF 0/1/2) to editable ACML, pure stdlib |
 | MIDI Export | GM standard with drum mapping, program change, serial/parallel modes |
 | `--prowav` | Compile + MIDI + FluidSynth WAV in one command |
 | `midi2wav` | Standalone MIDI to WAV rendering |
@@ -91,6 +95,7 @@ Place a SoundFont (e.g. FluidR3_GM.sf2) at `~/.acm/` or specify with `--soundfon
 ├── cli.py              CLI entry point
 ├── composer.py         Core synthesis engine
 ├── acml.py             ACML parser
+├── midiconv.py         MIDI -> ACML converter
 ├── track.py            Track data class
 ├── pyproject.toml
 ├── README.md
@@ -103,7 +108,7 @@ Place a SoundFont (e.g. FluidR3_GM.sf2) at `~/.acm/` or specify with `--soundfon
 │   └── cli-reference.md
 ├── samples/
 │   └── acm.acml        Example composition
-├── tests/              91 tests
+├── tests/              197 tests
 └── .github/
     ├── workflows/ci.yml
     ├── ISSUE_TEMPLATE/
