@@ -105,6 +105,21 @@ def _split_key_value(line):
         if sep in line:
             idx = line.index(sep)
             key = line[:idx].strip().lower()
-            val = line[idx + 1:].split("#")[0].strip().strip('"').strip("'")
+            raw = line[idx + 1:].strip()
+            if raw[:1] in ('"', "'"):
+                # Quoted value: keep everything up to the closing quote (no comment stripping)
+                quote = raw[0]
+                end = raw.find(quote, 1)
+                val = raw[1:end] if end != -1 else raw[1:]
+            else:
+                # Unquoted: '#' starts a comment only when preceded by whitespace,
+                # so sharp note names like F#1 / C#4 stay intact.
+                comment = None
+                for i, ch in enumerate(raw):
+                    if ch == "#" and (i == 0 or raw[i - 1].isspace()):
+                        comment = i
+                        break
+                val = raw[:comment] if comment is not None else raw
+                val = val.strip()
             return key, val
     return None, None

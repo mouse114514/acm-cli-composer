@@ -371,7 +371,7 @@ def main(argv=None):
                         expr = expr.strip()
                         if expr and ":" in expr:
                             parts = expr.split(":")
-                            if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesWHQES":
+                            if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesxWHQESX":
                                 track_beats += Composer._parse_duration(parts[1])
                             else:
                                 track_beats += 1.0
@@ -435,13 +435,15 @@ def main(argv=None):
             sf_path = args.soundfont
             if not sf_path:
                 candidates = [
+                    os.path.expanduser("~/.opencode/FluidR3_GM.sf2"),
+                    os.path.expanduser("~/.opencode/default.sf2"),
                     os.path.expanduser("~/.acm/default.sf2"),
                     os.path.expanduser("~/.acm/FluidR3_GM.sf2"),
                     "/usr/share/sounds/sf2/FluidR3_GM.sf2",
                 ]
                 sf_path = next((p for p in candidates if os.path.exists(p)), None)
             if not sf_path or not os.path.exists(sf_path):
-                print("Error: SoundFont not found. Use --soundfont or place one at ~/.acm/FluidR3_GM.sf2")
+                print("Error: SoundFont not found. Use --soundfont or place one at ~/.opencode/FluidR3_GM.sf2 or ~/.acm/FluidR3_GM.sf2")
                 return
             wav_output = os.path.splitext(midi_path)[0] + "_prowav.wav"
             cmd = [
@@ -474,6 +476,37 @@ def main(argv=None):
                         wf.setframerate(sr)
                         wf.writeframes(frames)
                     wf.close()
+                except Exception:
+                    pass
+            elif args.trim:
+                # Trim trailing silence the same way composer.generate does
+                import wave
+                try:
+                    wf = wave.open(wav_output, "rb")
+                    sr = wf.getframerate()
+                    ch = wf.getnchannels()
+                    sw = wf.getsampwidth()
+                    frames = wf.readframes(wf.getnframes())
+                    wf.close()
+                    if sw == 2:
+                        import array
+                        a = array.array("h")
+                        a.frombytes(frames)
+                        thr = int(0.003 * 32767)
+                        last = 0
+                        for i in range(len(a) - 1, -1, -1):
+                            if abs(a[i]) > thr:
+                                last = i // ch
+                                break
+                        pad = int(0.12 * sr)
+                        cut = min(last + 1 + pad, len(a) // ch)
+                        if cut < len(a) // ch:
+                            wf = wave.open(wav_output, "wb")
+                            wf.setnchannels(ch)
+                            wf.setsampwidth(sw)
+                            wf.setframerate(sr)
+                            wf.writeframes(a[:cut * ch].tobytes())
+                            wf.close()
                 except Exception:
                     pass
             size = os.path.getsize(wav_output)
@@ -552,14 +585,17 @@ def main(argv=None):
         if not sf_path:
             # 查找常见 SoundFont 路径
             candidates = [
+                os.path.expanduser("~/.opencode/FluidR3_GM.sf2"),
+                os.path.expanduser("~/.opencode/default.sf2"),
                 os.path.expanduser("~/.acm/default.sf2"),
+                os.path.expanduser("~/.acm/FluidR3_GM.sf2"),
                 "/usr/share/sounds/sf2/FluidR3_GM.sf2",
                 "/usr/share/sounds/sf2/default.sf2",
                 "/System/Library/Components/CoreAudio.component/Contents/Resources/gs_instruments.sf2",
             ]
             sf_path = next((p for p in candidates if os.path.exists(p)), None)
         if not sf_path or not os.path.exists(sf_path):
-            print(f"Error: SoundFont not found. Specify it with --soundfont or place one at ~/.acm/default.sf2")
+            print(f"Error: SoundFont not found. Specify it with --soundfont or place one at ~/.opencode/FluidR3_GM.sf2")
             return
 
         output = args.output

@@ -229,8 +229,9 @@ notes = C4:q:mf,E4:q:mf,G4:q:mf,C5:h:f
 | `q` | quarter note | 1 beat |
 | `e` | eighth note | 0.5 beats |
 | `s` | sixteenth note | 0.25 beats |
+| `x` | thirty-second note | 0.125 beats |
 
-Adding `.` indicates a dotted note, duration × 1.5, e.g. `h.` = 3 beats.
+Adding `.` indicates a dotted note, duration × 1.5, e.g. `h.` = 3 beats, `x.` = 0.1875 beats.
 
 **Velocity markings**:
 
@@ -292,7 +293,7 @@ Expansion happens automatically at input time; the stored JSON already uses the 
 | `fm` | 2-operator FM synthesis (adjustable ratio/index), metallic/electronic texture |
 | `wavetable` | Wavetable synthesis (saw/square/triangle/sine or custom), retro digital feel |
 | `sample` | Sample playback (loads WAV, supports pitch shifting), realistic instruments/vocals |
-| `drums` | Drum kit, includes K(kick), S(snare), H(closed hi-hat), O(open hi-hat), T(tom) |
+| `drums` | Drum kit, includes K(kick), S(snare), C(clap), H(closed hi-hat), O(open hi-hat), T(tom), Y(tambourine), Z(cymbal) |
 | `trumpet` | Multi-harmonic mix (rich odd and even harmonics), bright brass |
 | `tuba` | Strong fundamental with weak harmonics, deep low brass |
 
@@ -1073,7 +1074,7 @@ python cli.py midi2wav output/song.mid --output output/song_final.wav
 
 Prerequisites:
 - Install FluidSynth (`choco install fluidsynth` or download from the official website)
-- Download a SoundFont file (e.g., FluidR3_GM.sf2), place it in `~/.acm/` or specify via `--soundfont`
+- Download a SoundFont file (e.g., FluidR3_GM.sf2), place it in `~/.opencode/` or `~/.acm/`, or specify via `--soundfont`
 
 **Q: How do I adjust the FM synthesizer's ratio and index?**
 

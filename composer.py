@@ -260,7 +260,7 @@ class Composer:
     def _parse_duration(dur_str):
         base = dur_str[0].lower()
         dotted = len(dur_str) > 1 and dur_str[1] == "."
-        m = {"w": 4.0, "h": 2.0, "q": 1.0, "e": 0.5, "s": 0.25}
+        m = {"w": 4.0, "h": 2.0, "q": 1.0, "e": 0.5, "s": 0.25, "x": 0.125}
         val = m.get(base, 1.0)
         return val * 1.5 if dotted else val
 
@@ -279,7 +279,7 @@ class Composer:
             part = part.strip()
             if ":" in part:
                 parts = part.split(":")
-                if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesWHQES":
+                if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesxWHQESX":
                     return True
         return False
 
@@ -419,7 +419,7 @@ class Composer:
     def _subdivide_duration(dur_str, n):
         base = dur_str[0].lower()
         dotted = len(dur_str) > 1 and dur_str[1] == "."
-        m = {"w": 4.0, "h": 2.0, "q": 1.0, "e": 0.5, "s": 0.25}
+        m = {"w": 4.0, "h": 2.0, "q": 1.0, "e": 0.5, "s": 0.25, "x": 0.125}
         total = m.get(base, 1.0) * (1.5 if dotted else 1.0)
         each = total / n
         rev = {}
@@ -447,7 +447,7 @@ class Composer:
             parts = expr.split(":")
             note_part = parts[0]
             dur_str = parts[1] if len(parts) >= 2 else "q"
-            dur = self._parse_duration(dur_str) if dur_str and dur_str[0] in "whqesWHQES" else 1.0
+            dur = self._parse_duration(dur_str) if dur_str and dur_str[0] in "whqesxWHQESX" else 1.0
             if note_part not in ("R", "_"):
                 midi = self._note_name_to_midi(note_part)
                 pc = midi % 12
@@ -507,7 +507,7 @@ class Composer:
         r"^([A-Ga-g][#b]?)"     # note (C, C#, Bb)
         r"([a-z]*)"              # chord type (m, maj7, dim, etc.)
         r"(\d*)"                  # octave
-        r"([whqes]\.?)"          # duration + optional dot
+        r"([whqesx]\.?)"          # duration + optional dot
         r"(?:\(([^)]+)\)|([a-z]*))?$"  # dynamic: (mf) or f
     )
 
@@ -576,7 +576,7 @@ class Composer:
             _suffix = chord_candidate[_i:]
             if _suffix.isdigit() and len(_suffix) <= 2 and int(_suffix) <= 9:
                 rest = ":".join(part.split(":")[1:])
-                if rest and rest[0] in "whqesWHQES":
+                if rest and rest[0] in "whqesxWHQESX":
                     return [part]
             if Composer._is_chord_name(chord_candidate):
                 return [Composer._expand_chord(part)]
@@ -584,7 +584,7 @@ class Composer:
         if part[0] in Composer._DRUM_TYPES:
             note = part[0]
             suffix = part[1:]
-            dur_char = suffix[0] if suffix and suffix[0] in "whqes" else "q"
+            dur_char = suffix[0] if suffix and suffix[0] in "whqesx" else "q"
             dur = dur_char
             rest = suffix[1:] if suffix.startswith(dur_char) else suffix
             if rest and rest[0] == ".":
@@ -594,7 +594,7 @@ class Composer:
             return [f"{note}:{dur}:{dyn}"]
         if part[0].upper() == "R":
             suffix = part[1:]
-            dur_char = suffix[0] if suffix and suffix[0] in "whqes" else "q"
+            dur_char = suffix[0] if suffix and suffix[0] in "whqesx" else "q"
             dur = dur_char
             rest = suffix[1:] if suffix.startswith(dur_char) else suffix
             if rest and rest[0] == ".":
@@ -611,7 +611,7 @@ class Composer:
             if ctype and ctype in Composer._CHORD_SEMITONES:
                 return [Composer._expand_chord(f"{note}{ctype}{octave}:{dur}:{dyn}")]
             return [f"{note}{octave}:{dur}:{dyn}"]
-        m2 = re.match(r"^([A-G][#b]?[a-z0-9]*?)([whqes]\.?)([a-z]*)$", part)
+        m2 = re.match(r"^([A-G][#b]?[a-z0-9]*?)([whqesx]\.?)([a-z]*)$", part)
         if m2 and Composer._is_chord_name(m2.group(1)):
             chord_n = m2.group(1)
             dur = m2.group(2)
@@ -630,7 +630,7 @@ class Composer:
             return None, dur, 0
         if len(parts) == 1:
             return self._note_name_to_freq(note_part), 1.0, 1.0
-        if parts[1] and parts[1][0] in "whqesWHQES":
+        if parts[1] and parts[1][0] in "whqesxWHQESX":
             dur = self._parse_duration(parts[1])
             vel = self._parse_dynamic(parts[2]) if len(parts) > 2 else 0.65
             return self._note_name_to_freq(note_part), dur, vel
@@ -809,7 +809,7 @@ class Composer:
                     expr = expr.strip()
                     if expr and ":" in expr:
                         parts = expr.split(":")
-                        if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesWHQES":
+                        if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesxWHQESX":
                             track_beats += self._parse_duration(parts[1])
                         else:
                             track_beats += 1.0
@@ -1026,7 +1026,7 @@ class Composer:
 
     # ---- MIDI Export ----------------------------------------------------------------------------
 
-    _MIDI_DRUM_MAP = {"K": 36, "S": 38, "H": 42, "O": 46, "T": 47}
+    _MIDI_DRUM_MAP = {"K": 36, "S": 38, "C": 39, "H": 42, "O": 46, "T": 47, "Y": 54, "Z": 49}
 
     @staticmethod
     def _note_name_to_midi(note_str):
@@ -1082,7 +1082,7 @@ class Composer:
             vel_str = parts[2] if len(parts) > 2 else None
             if vel_str is not None:
                 last_vel = self._parse_dynamic(vel_str)
-            beat_frac = self._parse_duration(dur_str) if dur_str and dur_str[0] in "whqesWHQES" else 1.0
+            beat_frac = self._parse_duration(dur_str) if dur_str and dur_str[0] in "whqesxWHQESX" else 1.0
             delta_ticks = int(beat_frac * ticks_per_beat)
             if note_part in ("R", "_"):
                 pending_ticks += delta_ticks
@@ -1192,6 +1192,24 @@ class Composer:
         parallel_entries = []
         serial_entries = []
         channel = 0
+        # One channel per instrument: tracks of the same instrument safely share a
+        # channel (same program change), different instruments never collide.
+        instrument_channels = {}
+
+        def channel_for(instrument):
+            nonlocal channel
+            if instrument in instrument_channels:
+                return instrument_channels[instrument]
+            for _ in range(16):
+                c = channel % 16
+                channel += 1
+                if c != 9:  # never reuse the percussion channel
+                    instrument_channels[instrument] = c
+                    return c
+            # Fallback (more than 15 instruments): reuse oldest assignments
+            c = next(k for k in range(16) if k != 9)
+            instrument_channels[instrument] = c
+            return c
 
         for track in self.tracks:
             notes_str = track.notes
@@ -1212,17 +1230,14 @@ class Composer:
                     harm_semitones = [st]
 
             events = None
-            ch = 9 if is_drums else channel
+            ch = 9 if is_drums else channel_for(track.instrument)
 
             if notes_str and self._is_extended_notes(notes_str):
                 events = self._build_midi_events_from_notes(notes_str, ch, track.instrument, harm_semitones, max_ticks)
-                if not is_drums:
-                    channel += 1
             elif is_drums:
                 events = self._build_midi_drum_pattern(track, ticks_per_beat)
             else:
                 events = self._build_midi_pattern(track, ticks_per_beat, ch)
-                channel += 1
 
             if not events:
                 continue
@@ -1411,7 +1426,7 @@ class Composer:
                 continue
             parts = expr.split(":")
             dtype = parts[0]
-            beat_frac = self._parse_duration(parts[1]) if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesWHQES" else 1.0
+            beat_frac = self._parse_duration(parts[1]) if len(parts) >= 2 and parts[1] and parts[1][0] in "whqesxWHQESX" else 1.0
             vel = self._parse_dynamic(parts[2]) if len(parts) > 2 else last_vel
             last_vel = vel
             nsamples = int(beat_frac * spb)
@@ -1452,5 +1467,28 @@ class Composer:
                     t = i / sr
                     env = _exp(-i / (nsamples * 0.15))
                     data[pos + i] += _sin(2 * math.pi * 80 * t) * env * 0.5 * vel
+            elif dtype == "C":
+                for i in range(nsamples):
+                    env = _exp(-i / (nsamples * 0.06))
+                    noise = ((i * 113) % 200) / 200 * 2 - 1
+                    data[pos + i] += noise * env * 0.45 * vel
+            elif dtype == "Y":
+                prev = 0.0
+                for i in range(nsamples):
+                    env = _exp(-i / (nsamples * 0.08))
+                    noise_raw = ((i * 97) % 200) / 200 * 2 - 1
+                    noise = noise_raw - prev
+                    prev = noise_raw
+                    t = i / sr
+                    data[pos + i] += (noise * 0.25 + _sin(2 * math.pi * 6500 * t) * 0.1) * env * 0.35 * vel
+            elif dtype == "Z":
+                prev = 0.0
+                for i in range(nsamples):
+                    env = _exp(-i / (nsamples * 0.35))
+                    noise_raw = ((i * 79) % 200) / 200 * 2 - 1
+                    noise = noise_raw - prev
+                    prev = noise_raw
+                    t = i / sr
+                    data[pos + i] += (noise * 0.4 + _sin(2 * math.pi * 4200 * t) * 0.15) * env * 0.4 * vel
             pos += nsamples
         return data

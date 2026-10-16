@@ -11,7 +11,8 @@ _MIDI_TO_NOTE = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
 
 # (beats, letter) - sorted ascending; used for quantization
 _DURATION_VALUES = [
-    (0.25, "s"), (0.375, "s."), (0.5, "e"), (0.75, "e."),
+    (0.125, "x"), (0.1875, "x."), (0.25, "s"), (0.375, "s."),
+    (0.5, "e"), (0.75, "e."),
     (1.0, "q"), (1.5, "q."), (2.0, "h"), (3.0, "h."),
     (4.0, "w"), (6.0, "w."),
 ]
@@ -76,7 +77,7 @@ def _velocity_to_dynamic(velocity):
 def _duration_value(letter):
     dotted = letter.endswith(".")
     base = letter[0].lower()
-    m = {"w": 4.0, "h": 2.0, "q": 1.0, "e": 0.5, "s": 0.25}
+    m = {"w": 4.0, "h": 2.0, "q": 1.0, "e": 0.5, "s": 0.25, "x": 0.125}
     val = m.get(base, 1.0)
     return val * 1.5 if dotted else val
 
@@ -96,15 +97,16 @@ def _fit_duration(max_beats):
 
 
 def _gap_to_rests(gap_beats):
-    """Decompose a gap into rest tokens snapped to a sixteenth grid."""
+    """Decompose a gap into rest tokens snapped to a 32nd-note grid."""
     if gap_beats < 0.125:
         return []
-    steps = int(round(gap_beats / 0.25))
+    steps = int(round(gap_beats / 0.125))
     if steps <= 0:
         return []
     tokens = []
-    for val, letter in [(16, "w"), (12, "h."), (8, "h"), (6, "q."),
-                        (4, "q"), (3, "e."), (2, "e"), (1, "s")]:
+    for val, letter in [(32, "w"), (24, "h."), (16, "h"), (12, "q."),
+                        (8, "q"), (6, "e."), (4, "e"), (3, "x."),
+                        (2, "s"), (1, "x")]:
         while steps >= val:
             tokens.append(f"R:{letter}")
             steps -= val
@@ -114,18 +116,41 @@ def _gap_to_rests(gap_beats):
 # ---------------------------------------------------------------------------
 # Drum mapping (GM percussion note -> ACM drum letter)
 # ---------------------------------------------------------------------------
-
 _DRUM_MAP = {
     35: "K", 36: "K",
-    37: "S", 38: "S", 39: "S", 40: "S",
+    37: "S", 38: "S", 40: "S",
+    39: "C",
     41: "T", 43: "T", 45: "T", 47: "T", 48: "T", 50: "T",
     42: "H", 44: "H",
     46: "O",
-    49: "O", 51: "O", 53: "O", 55: "O", 57: "O", 59: "O",
+    49: "Z", 51: "Z", 52: "Z", 53: "Z", 55: "Z", 57: "Z", 59: "Z",
+    54: "Y",
 }
 
+
+def _map_drum_pitch(pitch):
+    """Map any GM percussion pitch to an ACM drum letter (never drops)."""
+    if pitch in _DRUM_MAP:
+        return _DRUM_MAP[pitch]
+    if 35 <= pitch <= 36:
+        return "K"
+    if 37 <= pitch <= 40:
+        return "C" if pitch == 39 else "S"
+    if 41 <= pitch <= 50:
+        return "T"
+    if pitch == 54:
+        return "Y"
+    if 51 <= pitch <= 59:
+        return "Z"
+    if 60 <= pitch <= 81:
+        # latin percussion, wood blocks, claves, triangle
+        return "H"
+    return "H"
+
+
 _DRUM_TRACK_NAMES = {
-    "K": "kick", "S": "snare", "H": "hats", "O": "cymbals", "T": "toms",
+    "K": "kick", "S": "snare", "C": "claps", "H": "hats",
+    "O": "open_hats", "T": "toms", "Y": "tambourine", "Z": "cymbals",
 }
 
 
@@ -459,9 +484,7 @@ def _drum_group_to_events(notes, tpb):
         if available < _duration_value(dur_q) - 0.01:
             dur_q = _fit_duration(available)
 
-        drum = _DRUM_MAP.get(note["pitch"])
-        if drum is None:
-            continue  # unmapped percussion - skip (but time already advanced?)
+        drum = _map_drum_pitch(note["pitch"])
         dyn = _velocity_to_dynamic(note["velocity"])
         events.append((f"{drum}:{dur_q}:{dyn}", _duration_value(dur_q)))
         current += _duration_value(dur_q)
@@ -522,9 +545,7 @@ def midi_to_acml_text(midi_data, name="untitled"):
             # drums: group by drum type
             groups = {}
             for n in notes:
-                drum = _DRUM_MAP.get(n["pitch"])
-                if drum is None:
-                    continue
+                drum = _map_drum_pitch(n["pitch"])
                 groups.setdefault(drum, []).append(n)
             for drum in sorted(groups.keys(), key=lambda d: list(_DRUM_MAP.values()).index(d) if d in _DRUM_MAP.values() else 99):
                 events = _drum_group_to_events(groups[drum], tpb)

@@ -113,7 +113,7 @@ python cli.py compose song.acml --json
 3. Call `fluidsynth` to convert MIDI → high-quality WAV (`*_prowav.wav`)
 
 When `--midi` is not specified, the MIDI path is automatically derived from the output filename.
-SoundFont lookup order: `--soundfont` argument → `~/.acm/FluidR3_GM.sf2` → default system path.
+SoundFont lookup order: `--soundfont` argument → `~/.opencode/FluidR3_GM.sf2` → `~/.acm/FluidR3_GM.sf2` → default system path.
 
 ---
 
@@ -322,9 +322,11 @@ python cli.py midi2wav output/song.mid -o output/final.wav
 
 SoundFont lookup order:
 1. Path specified by `--soundfont` argument
-2. `~/.acm/default.sf2`
-3. `~/.acm/FluidR3_GM.sf2`
-4. Default system path
+2. `~/.opencode/FluidR3_GM.sf2`
+3. `~/.opencode/default.sf2`
+4. `~/.acm/default.sf2`
+5. `~/.acm/FluidR3_GM.sf2`
+6. Default system path
 
 ---
 
@@ -350,11 +352,11 @@ python cli.py midiconv <input.mid> [options]
 |--------------|--------------|
 | Tempo meta event | `bpm = <value>` (first tempo wins; default 120) |
 | Note pitch | Note name, e.g. MIDI 60 → `C4` (C4 = middle C) |
-| Note duration | Quantized to the nearest ACML duration (`w w. h h. q q. e e. s s.`) |
+| Note duration | Quantized to the nearest ACML duration (`w w. h h. q q. e e. s s. x x.`) |
 | Velocity (0-127) | Nearest dynamic: `ppp pp p mp mf f ff fff` |
 | Program change (GM) | Instrument name: piano, guitar, bass, organ, strings, brass, lead, pad, bell, sawtooth, wavetable, trumpet, tuba |
 | Track name meta event | Sanitized track label (e.g. `My Track!` → `My_Track`) |
-| Channel 9 (percussion) | Drum tracks: `K` kick, `S` snare, `H` hi-hat, `O` open hat/cymbals, `T` toms |
+| Channel 9 (percussion) | Drum tracks: `K` kick, `S` snare, `C` clap, `H` hi-hat, `O` open hat, `T` toms, `Y` tambourine, `Z` cymbals |
 | Overlapping notes (chords) | Split into parallel monophonic tracks (`_v1`, `_v2`, …) |
 | Gaps between notes | Rests (`R:q`, `R:e`, …) |
 
@@ -378,7 +380,7 @@ python cli.py compile song.acml --prowav
 
 ### Notes & Limitations
 
-- **Duration quantization**: MIDI timing is converted to the nearest ACML duration letter. Files quantized to a sixteenth-note grid convert losslessly; unquantized timing may drift slightly.
+- **Duration quantization**: MIDI timing is converted to the nearest ACML duration letter. Files quantized to a 32nd-note grid convert losslessly; unquantized timing may drift slightly.
 - **Long notes**: the longest ACML duration is `w.` (6 beats). Notes longer than that are truncated to `w.` with a following rest, so overall timing is preserved but sustain is shortened.
 - **Highly polyphonic channels** are split into one track per simultaneous voice. A channel with a large note cluster (e.g. 70+ simultaneous notes) produces many tracks — each is required to represent true polyphony, since one ACML track is monophonic.
 - **GM sound effects programs** (120-127) map to `wavetable`.

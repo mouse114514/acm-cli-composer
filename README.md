@@ -60,7 +60,7 @@ brew install fluid-synth
 sudo apt install fluidsynth
 ```
 
-Place a SoundFont (e.g. FluidR3_GM.sf2) at `~/.acm/` or specify with `--soundfont`.
+Place a SoundFont (e.g. FluidR3_GM.sf2) at `~/.opencode/`, `~/.acm/`, or specify with `--soundfont`.
 
 ## Documentation
 
@@ -79,7 +79,7 @@ Place a SoundFont (e.g. FluidR3_GM.sf2) at `~/.acm/` or specify with `--soundfon
 | `--prowav` | Compile + MIDI + FluidSynth WAV in one command |
 | `midi2wav` | Standalone MIDI to WAV rendering |
 | Instruments | piano, guitar, bass, sawtooth, organ, bell, strings, brass, pad, lead, fm, wavetable, sample, trumpet, tuba, drums |
-| Drums | K(kick), S(snare), H(hi-hat closed), O(hi-hat open), T(tom) |
+| Drums | K(kick), S(snare), C(clap), H(hi-hat closed), O(hi-hat open), T(tom), Y(tambourine), Z(cymbal) |
 | Chords | 17 types + auto-harmony + chord recommendation |
 | FM Synthesis | Adjustable ratio/index |
 | Wavetable | saw / square / triangle / sine / custom |
